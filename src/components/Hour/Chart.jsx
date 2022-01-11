@@ -21,19 +21,41 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+
+
+
+
+export default function Chart({hour, temp, tempFeelLike}) {
+const labels = hour;
+
+  const data = {
+  labels,
+  datasets: [
+      {
+        label: ' Temp (°C)',
+        data: temp,
+        borderColor: '#8E5EA2',
+        backgroundColor: 'rgba(229,229,229, 0)',
+        yAxisID: 'y',
+      },
+      {
+        label: ' Feel like (°C)',
+        data:  tempFeelLike,
+        borderColor: '#3CBA9F',
+        backgroundColor: 'rgba(229,229,229, 0)',
+        yAxisID: 'y1',
+      },
+    ],
+  };
+
+const options = {
   responsive: true,
   interaction: {
     mode: 'index',
     intersect: false,
   },
   stacked: false,
-  plugins: {
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart - Multi Axis',
-    },
-  },
+ 
   scales: {
     y: {
       type: 'linear',
@@ -42,8 +64,8 @@ export const options = {
     },
     y1: {
       type: 'linear',
-      display: true,
-      position: 'right',
+      display: false,
+      position: 'left',
       grid: {
         drawOnChartArea: false,
       },
@@ -51,28 +73,5 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [2,10,33,33,331,44,33],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      yAxisID: 'y',
-    },
-    {
-      label: 'Dataset 2',
-      data:  [2,10,33,33,331,44,33],
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      yAxisID: 'y1',
-    },
-  ],
-};
-
-export default function Chart() {
- return  <Line options={options} data={data} />;
+  return  <Line options={options} data={data} />;
 }
