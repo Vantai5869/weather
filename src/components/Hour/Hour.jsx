@@ -1,7 +1,7 @@
 import moment from 'moment';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Chart from './Chart';
-import {useSelector} from 'react-redux';
 
 export default function Hour() {
   const weatherReducer = useSelector(state => state.weatherReducer);

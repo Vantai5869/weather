@@ -1,10 +1,10 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Avatar from './Avatar';
-import Tab from './Tab'
+import Hour from './Hour/Hour';
+import Tab from './Tab';
 import Todaytab from './TodayTab/TodayTab';
 import WeekTab from './WeekTab/WeekTab';
-import Hour from './Hour/Hour';
-import {useSelector} from 'react-redux';
 
 const Rightbar = () => {
   const [tab, setTab]= useState('today')

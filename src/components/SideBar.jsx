@@ -1,7 +1,7 @@
-import React,{useState} from 'react';
-import clouds from '../images/clouds.png';
-import {useSelector} from 'react-redux';
 import moment from 'moment';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import clouds from '../images/clouds.png';
 
 const Sidebar = ({onSearch}) => {
   const currentWeather = useSelector(state => state.weatherReducer.weather?.current);

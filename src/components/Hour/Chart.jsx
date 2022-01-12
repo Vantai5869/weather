@@ -1,14 +1,8 @@
-import React from 'react';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
+  CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Title,
+  Tooltip
 } from 'chart.js';
+import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
@@ -21,13 +15,8 @@ ChartJS.register(
   Legend
 );
 
-
-
-
-
 export default function Chart({hour, temp, tempFeelLike}) {
 const labels = hour;
-
   const data = {
   labels,
   datasets: [
@@ -73,5 +62,5 @@ const options = {
   },
 };
 
-  return  <Line options={options} data={data} />;
+return  <Line options={options} data={data} />;
 }

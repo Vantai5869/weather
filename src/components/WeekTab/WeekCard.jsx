@@ -1,5 +1,5 @@
-import React from 'react';
 import moment from 'moment';
+import React from 'react';
 
 export default function WeekCard({item, index, onActive, itemActive}) {
   return (
@@ -16,6 +16,7 @@ export default function WeekCard({item, index, onActive, itemActive}) {
           <img
             src={`https://openweathermap.org/img/w/${item.weather[0].icon}.png`}
             className="img-fluid"
+            alt='card'
           />
           <p className="fs-6 text-muted fw-bold">
           {

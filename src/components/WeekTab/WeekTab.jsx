@@ -1,7 +1,7 @@
-import React,{useState} from 'react'
-import {useSelector} from 'react-redux'
-import WeekCard from './WeekCard'
-import Detail from './Detail'
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import Detail from './Detail';
+import WeekCard from './WeekCard';
 export default function WeekTab() {
   const weather = useSelector(state => state.weatherReducer.weather);
   const data= weather?.daily? weather?.daily: [];

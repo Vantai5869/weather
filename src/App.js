@@ -1,8 +1,8 @@
-import React,{useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Rightbar from './components/RightBar';
 import Sidebar from './components/SideBar';
-import { useDispatch } from 'react-redux';
-import {getWeatherAsync} from './store/reducers/WeatherSlice';
+import { getWeatherAsync } from './store/reducers/WeatherSlice';
 
 function App() {
   const dispatch= useDispatch()
@@ -12,7 +12,7 @@ function App() {
   }
   useEffect(() => {
       dispatch(getWeatherAsync(keySearch))
-  }, [keySearch])
+  }, [dispatch, keySearch])
 
   return (
     <div className="res container position-absolute overflow-hidden" style={{height:'90vh'}}>

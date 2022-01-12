@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 export default function Detail({itemActive}) {
   const weather = useSelector(state => state.weatherReducer.weather);

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import Svg1 from './svg/Svg1';
 import Svg2 from './svg/Svg2';
 import Svg3 from './svg/Svg3';
